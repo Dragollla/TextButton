@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    bintrayRepo = 'Android'
+    bintrayName = 'text-button'
+
+    publishedGroupId = 'dragollla.views'
+    libraryName = 'TextButton'
+    artifact = 'text-button'
+
+    libraryDescription = 'Simple Android library which provides convenient way to react on user interactions with text fields.'
+
+    siteUrl = 'https://github.com/Dragollla16/TextButton'
+    gitUrl = 'https://github.com/Dragollla16/TextButton.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'dragollla'
+    developerName = 'Nikita Shalin'
+    developerEmail = 'dragollla16@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-annotations:25.3.1'
+}
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://gist.githubusercontent.com/Dragollla16/2216c8d1226965f2262f363a09efad3b/raw/3064bcd2bb43527d9efb4cb47d14d401c5be64d9/bintray.gradle'
