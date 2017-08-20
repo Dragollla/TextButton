@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextButton">
+        <attr name="dr_active_color" format="color"/>
+    </declare-styleable>
+</resources>
