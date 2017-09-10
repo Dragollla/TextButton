@@ -3,5 +3,5 @@
 
 ## Gradle dependency
 ```
-compile 'dragollla.views:text-button:1.0.0'
+compile 'dragollla.views:text-button:1.0.1'
 ```
