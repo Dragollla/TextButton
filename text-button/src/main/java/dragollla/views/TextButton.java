@@ -90,7 +90,7 @@ public class TextButton extends android.support.v7.widget.AppCompatTextView {
      * @see #getDefaultColor()
      */
     public void setDefaultColorRes(@android.support.annotation.ColorRes int colorId) {
-        setTextColor(ContextCompat.getColor(getContext(), colorId));
+        setDefaultColor(ContextCompat.getColor(getContext(), colorId));
     }
     /**
      * Sets text color for button default state (not pressed).
@@ -100,6 +100,7 @@ public class TextButton extends android.support.v7.widget.AppCompatTextView {
      */
     public void setDefaultColor(int color) {
         mDefaultColor = color;
+        setTextColor(color);
     }
     /**
      * @return text color for default button state.
